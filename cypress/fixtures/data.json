@@ -1,0 +1,34 @@
+{
+
+        "ProductName":{
+            "product1": "Campera Negra",
+            "product2":"Medias Negras"
+        },
+
+        "Quantity":{
+            "quantity1":"1",
+            "quantity2":"2",
+            "quantity3":"3"
+        },
+
+        "UnitPrice":{
+            "CamperaNegra": "$20.14",
+            "MediasNegras": "$5.43"
+        },
+
+        "TotalPrice":{
+            "totalPriceCamperaNegra": "$40.28",
+            "totalPriceMediasNegra": "$5.43"
+        },
+
+        "ButtonShopping": "Show total price",
+
+        "PriceTotal":{
+            "textTotal": "Total $",
+            "amount" : "45.71"
+        }
+    
+
+        
+   
+}
