@@ -5,14 +5,16 @@ export class ProductPage{
         this.cartbutton = "#add-to-cart-1005"
         this.closeButton = "#closeModal"
         this.goShoppinggCart = "#goShoppingCart"
+        this.PaginationButton= "button[type='button']"
+        
     }
 
-    camperaNegra(){
-        cy.get(this.cartButton).click();
+    camperaNegra(productName){
+        cy.contains(productName).siblings('div').children(this.cartButton).click(); 
     };
 
-    mediasNegras(){
-        cy.get(this.cartbutton).click();
+    mediasNegras(productName){
+        cy.contains(productName).siblings('div').children(this.cartbutton).click();
     };
 
     closeModal(){
@@ -22,4 +24,11 @@ export class ProductPage{
     clickOnGoShoppingCart(){
         cy.get(this.goShoppinggCart).click();
     };
+
+    clickOnPages1 (){
+        cy.contains(this.PaginationButton, "2").click();
+    }
+    clickOnPages2 (){
+        cy.contains(this.PaginationButton, "1").click();
+    }
 };

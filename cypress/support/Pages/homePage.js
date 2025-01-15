@@ -5,6 +5,6 @@ export class Homepage{
     }
 
     clickToOnlineShopLink (){
-        cy.get(this.onlineShoppLink, {timeout : 30000}).click();
+        cy.get(this.onlineShoppLink, {timeout : 3000}).click();
     }
 }
