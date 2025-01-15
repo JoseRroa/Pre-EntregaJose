@@ -9,32 +9,32 @@ export class ShoppingCartPage{
         this.totalClass = "#price"
     }
 
-    validProductCamperaNegra(ProductName, UnitPrice){
-        cy.contains(this.productDiv , ProductName ).should("exist").siblings(this.unitPriceDiv).should("have.text" , UnitPrice);
+    validProductCamperaNegra(productName, unitPrice){
+        cy.contains(this.productDiv , productName ).should("exist").siblings(this.unitPriceDiv).should("have.text" , unitPrice);
     };
 
-    validQuantityCamperaNegra(Quantity, TotalPrice){
-        cy.contains(this.quantityDiv, Quantity).should("exist").siblings(this.totalPriceDiv).should("have.text", TotalPrice)
+    validQuantityCamperaNegra(quantity, totalPrice){
+        cy.contains(this.quantityDiv, quantity).should("exist").siblings(this.totalPriceDiv).should("have.text", totalPrice)
     };
 
-    validProductMediasNegras(ProductName, UnitPrice){
-        cy.contains(this.productDiv , ProductName).siblings(this.unitPriceDiv).should("have.text", UnitPrice);
+    validProductMediasNegras(productName, unitPrice){
+        cy.contains(this.productDiv , productName).siblings(this.unitPriceDiv).should("have.text", unitPrice);
     };
 
-    validQuantityMediasNegras(Quantity, TotalPrice){
-        cy.contains(this.quantityDiv, Quantity).siblings(this.totalPriceDiv).should("have.text", TotalPrice)
+    validQuantityMediasNegras(quantity, totalPrice){
+        cy.contains(this.quantityDiv, quantity).siblings(this.totalPriceDiv).should("have.text", totalPrice)
     };
 
-    clickOnShowTotalPrice(ButtonShopping){
-        cy.contains("button" , ButtonShopping).should("have.text", ButtonShopping).click();
+    clickOnShowTotalPrice(buttonShopping){
+        cy.contains("button" , buttonShopping).should("have.text", buttonShopping).click();
     };
 
     verifyTotalexist(){
         cy.get(".chakra-text.css-vn850v").eq(0).should("exist")
     };
 
-    verifyTotal(PriceTotal, amount){
-        cy.contains(".chakra-text.css-vn850v", PriceTotal).siblings(this.totalClass).should("have.text", amount)
+    verifyTotal(priceTotal, amount){
+        cy.contains(".chakra-text.css-vn850v", priceTotal).siblings(this.totalClass).should("have.text", amount)
     }
 
 };

@@ -30,20 +30,22 @@ describe("PreEntrega",()=>
 
     it("should add products and choice",()=>
     {
-        productsPage.camperaNegra();
+        productsPage.clickOnPages1(the.quantity.quantity2);
+        productsPage.camperaNegra(the.productName.product1);
         productsPage.closeModal();
-        productsPage.camperaNegra();
+        productsPage.camperaNegra(the.productName.product1);
         productsPage.closeModal();
-        productsPage.mediasNegras();
+        productsPage.clickOnPages2(the.quantity.quantity1);
+        productsPage.mediasNegras(the.productName.product2);
         productsPage.closeModal();
         productsPage.clickOnGoShoppingCart();
-        shoppingCartPage.validProductCamperaNegra(the.ProductName.product1, the.UnitPrice.CamperaNegra);
-        shoppingCartPage.validQuantityCamperaNegra(the.Quantity.quantity2, the.TotalPrice.totalPriceCamperaNegra);
-        shoppingCartPage.validProductMediasNegras(the.ProductName.product2, the.TotalPrice.totalPriceMediasNegra);
-        shoppingCartPage.validQuantityMediasNegras(the.Quantity.quantity1, the.TotalPrice.totalPriceMediasNegra);
-        shoppingCartPage.clickOnShowTotalPrice(the.ButtonShopping);
-        shoppingCartPage.verifyTotalexist(the.PriceTotal.textTotal);
-        shoppingCartPage.verifyTotal(the.PriceTotal.textTotal, the.PriceTotal.amount);
+        shoppingCartPage.validProductCamperaNegra(the.productName.product1, the.unitPrice.camperaNegra);
+        shoppingCartPage.validQuantityCamperaNegra(the.quantity.quantity2, the.totalPrice.totalPriceCamperaNegra);
+        shoppingCartPage.validProductMediasNegras(the.productName.product2, the.unitPrice.mediasNegras);
+        shoppingCartPage.validQuantityMediasNegras(the.quantity.quantity1, the.totalPrice.totalPriceMediasNegra);
+        shoppingCartPage.clickOnShowTotalPrice(the.buttonShopping);
+        shoppingCartPage.verifyTotalexist(the.priceTotal.textTotal);
+        shoppingCartPage.verifyTotal(the.priceTotal.textTotal, the.priceTotal.amount);
     })
     
 })
