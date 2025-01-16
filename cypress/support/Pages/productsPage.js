@@ -25,10 +25,10 @@ export class ProductPage{
         cy.get(this.goShoppinggCart).click();
     };
 
-    clickOnPages1 (){
-        cy.contains(this.PaginationButton, "2").click();
+    clickOnPages1 (quantity){
+        cy.contains(this.PaginationButton, quantity).click();
     }
-    clickOnPages2 (){
-        cy.contains(this.PaginationButton, "1").click();
+    clickOnPages2 (quantity){
+        cy.contains(this.PaginationButton, quantity).click();
     }
 };
