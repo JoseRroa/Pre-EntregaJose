@@ -35,6 +35,14 @@ export class ShoppingCartPage{
 
     verifyTotal(priceTotal, amount){
         cy.contains(".chakra-text.css-vn850v", priceTotal).siblings(this.totalClass).should("have.text", amount)
+    };
+
+    totalPrice (totalPrice, productName){
+        cy.contains(this.totalPriceDiv, totalPrice).siblings(productName);
+    };
+    totalPrice(unitPrice, productName){
+        cy.contains(this.totalPriceDiv, unitPrice).siblings(productName).should("exist");
     }
+    
 
 };

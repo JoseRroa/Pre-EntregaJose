@@ -13,7 +13,9 @@
 
         "unitPrice":{
             "camperaNegra": "$20.14",
-            "mediasNegras": "$5.43"
+            "mediasNegras": "$5.43",
+            "camperaNegra2": 20.14,
+            "mediasnegras2": 5.43
         },
 
         "totalPrice":{
